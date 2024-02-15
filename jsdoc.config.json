@@ -1,0 +1,22 @@
+{
+    "plugins" : [
+        "plugins/markdown"
+    ],
+    "opts" : {
+        "template" : "node_modules/tui-jsdoc-template"
+    },
+    "source" : {
+        "include" : [
+            "./js/"
+        ],
+        "includePattern" : ".+\\.js(doc|x)?$",
+        "excludePattern" : "(^|\\/|\\\\)_"
+    },
+    "tags" : {
+        "allowUnknownTags" : true,
+        "dictionaries" : [
+            "jsdoc",
+            "closure"
+        ]
+    }
+}
