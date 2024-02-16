@@ -5,14 +5,9 @@
 const contactForm = document.getElementById('contactForm');
 
 /**
- * Evento que se ejecutará cuando se haga click en el botón de enviar el formulario.
- * Se previene el comportamiento por defecto del formulario y trata la información.
- * @event submit
- * @param {Event} e - Evento al enviar el formulario
+ * Función que envía el formulario
  */
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // Previene la recarga de la página
-
+function enviarMensaje() {
     // Variable en la que almacenamos el nombre del usuario
     const name = document.getElementById('name').value;
 
@@ -26,4 +21,9 @@ contactForm.addEventListener('submit', (e) => {
     } else {
         alert('Por favor, completa todos los campos.');
     }
+}
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    e.preventDefault();
+    contactForm.addEventListener('submit', enviarMensaje); 
 });

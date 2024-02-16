@@ -23,12 +23,10 @@ const imageElement = document.createElement('img');
 imageElement.src = images[currentIndex];
 document.querySelector('.content').appendChild(imageElement);
 
-/**
- * Evento que se ejecutará cuando se hace click sobre la imagen.
- * Cambia la imagen cuando se hace click sobre ella
- * @event click
- */
-imageElement.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    imageElement.src = images[currentIndex];
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    imageElement.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        imageElement.src = images[currentIndex];
+    });
 });
